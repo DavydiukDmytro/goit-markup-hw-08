@@ -1,0 +1,30 @@
+/* Hero секція герой*/
+.hero {
+    /* outline: 2px solid tomato; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: $secondary-bg;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../images/team.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    color: $white;
+
+    text-align: center;
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include text(900, 44px, 1.36, uppercase);
+    letter-spacing: 0.06em;
+}

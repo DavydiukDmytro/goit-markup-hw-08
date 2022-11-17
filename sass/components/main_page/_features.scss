@@ -1,0 +1,38 @@
+/* Features секція особливості*/
+.features {}
+
+.features__befor {
+    &::before{
+        display: block;
+        content: '';
+        height: 120px;
+        border-radius: 4px;
+        margin-bottom: 30px;
+        background-color: $secondary-two-bg;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 70px;
+    }
+}
+
+$icons: "antenna", "clock", "diagram", "astronaut";
+@each $iconName in $icons {
+    .features__befor--bg-#{$iconName}::before{
+        background-image: url('../images/#{$iconName}.svg');
+    }
+}
+
+.features__heading {
+    margin-top: 0;
+    margin-bottom: 10px;
+    @include text(700, $transform: uppercase);
+}
+
+.features__text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $secondary-text;
+
+    @include text($lheight: 1.71);
+}

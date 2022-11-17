@@ -1,0 +1,47 @@
+/* Site-nav навігація по сторінкам сайту*/
+.site-nav {
+    @extend %list;
+    display: flex;
+}
+
+.nav__site-nav {
+    margin-left: 93px;
+}
+
+.site-nav__element:not(:last-child) {
+    margin-right: 50px;
+}
+
+.site-nav__link {
+    display: block;
+    padding: 32px 0;
+
+    @include text(500);
+    color: $primary-text;
+    letter-spacing: 0.02em;
+
+    transition: $color;
+
+    &--current {
+        position: relative;
+        color: $accent;
+        
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: $accent;
+            border-radius: 2px;
+        }
+    }
+    
+
+    &:hover, &:focus{
+        color: $accent;
+    }
+}
+

@@ -1,0 +1,30 @@
+/* Activity секція чим ми займаємось*/
+
+.activity__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.activity__thumb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 27px 0;
+
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.activity__title {
+    padding: 0;
+    margin: 0;
+    @include text(700, $transform: uppercase);
+    letter-spacing: 0.03em;
+    color: $white;
+}

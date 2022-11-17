@@ -1,0 +1,41 @@
+// Підключення Utility
+@import './utils/variables';
+@import './utils/placeholder';
+// Підключення компонентів
+@import './components/body';
+@import './components/button';
+@import './components/section';
+@import './components/card-set';
+@import './components/social';
+@import './components/img';
+// Header
+@import './components/header/header';
+@import './components/container';
+@import './components/header/nav';
+@import './components/logo';
+@import './components/header/site-nav';
+@import './components/header/feedback-nav';
+// Main
+// Hero секція герой
+@import './components/main_page/hero';
+// Features секція особливості
+@import './components/main_page/features';
+// Activity секція чим ми займаємось
+@import './components/main_page/activity';
+// Our team секція наша команда
+@import './components/main_page/our-team';
+// Client секція постійні клієнти
+@import './components/main_page/client';
+// Footer
+@import './components/footer/footer';
+@import './components/footer/group';
+@import './components/footer/adress-nav';
+@import './components/footer/subscribe';
+// Backdrop
+@import './components/backdrop';
+// Модальне вікно
+@import './components/modal/modal';
+
+// Сторінка портфоліо
+@import './components/portfolio/portfolio-nav';
+@import './components/portfolio/portfolio';

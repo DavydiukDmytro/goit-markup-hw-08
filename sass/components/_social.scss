@@ -1,0 +1,34 @@
+/* Social список посилань на соціальні мережі */
+.social {
+    display: inline-flex;
+    padding: 12px;
+    border-radius: 50%;
+
+    transition: $bg-color;
+
+    &--backgrond {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $accent;
+    }
+}
+
+.social__svg {
+    fill: $icon-color;
+    width: 20px;
+    height: 20px;
+
+    transition: $fill;
+
+    &--white {
+        fill: $white;
+    }
+
+    .social:hover &,
+    .social:focus & {
+        fill: $white;
+    }
+}

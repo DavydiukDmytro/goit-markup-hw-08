@@ -1,0 +1,30 @@
+/* Section секція для контенту */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &--low-bottom-padding {
+        padding-bottom: 47px;
+    }
+    &--low-top-padding {
+        padding-top: 47px;
+    }
+    &--bg-color {
+        background-color: $secondary-two-bg;
+    }
+}
+
+.section__heading {
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    color: $primary-text;
+
+    @include text(700, 36px, 1.16);
+    text-align: center;
+
+    &--visually-hidden {
+        @extend %visual-hiden;
+    }
+}
+

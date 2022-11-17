@@ -1,0 +1,11 @@
+/* Portfolio-nav навігація портфоліо */
+.portfolio-nav {
+    @extend %list;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-nav__item:not(:last-child) {
+    margin-right: 8px;
+}

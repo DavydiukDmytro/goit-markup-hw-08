@@ -1,0 +1,41 @@
+%list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+%visual-hiden{
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+%modal-input{
+    padding: 12px 34px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    transition: border-color 250ms $cubic;
+}
+
+
+@mixin text($weight: 400, $size: 14px, $lheight: 1.14, $transform: none, $textdecor: none, $style: normal){
+    font-style: $style;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lheight;
+    text-transform: $transform;
+    text-decoration: $textdecor;
+}

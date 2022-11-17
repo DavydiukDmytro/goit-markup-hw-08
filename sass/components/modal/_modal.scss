@@ -1,0 +1,162 @@
+/* Modal модальне вікно */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+
+    min-height: 581px;
+    min-width: 528px;
+    padding: 40px;
+
+    background-color: #fff;
+
+    transition: transform 250ms $cubic;
+
+    .backdrop--is-hidden & {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: $white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal__svg-close {
+    fill: #000000;
+    width: 11px;
+    height: 11px;
+
+    transition: $fill;
+
+    .modal__close:hover &,
+    .modal__close:focus & {
+        fill: $accent;
+    }
+}
+
+
+
+.modal__heading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 12px;
+
+    @include text(700, 20px, 1.15);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primary-text;
+}
+
+.modal__form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__label {
+    margin-bottom: 4px;
+    margin-top: 0px;
+
+    @include text($size: 12px, $lheight: 1.16);
+    letter-spacing: 0.01em;
+    color: $secondary-text;
+
+    &--margin-top {
+        margin-top: 10px;
+    }
+    &--margin0 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+    }
+}
+
+.modal__svg {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+
+    transition: $fill;
+
+    .modal__form-field:focus-within & {
+        fill: $accent;
+    }
+}
+
+.modal__input{
+    @extend %modal-input;
+
+    &--visually-hidden {
+        @extend %visual-hiden;
+    }
+
+    .modal__form-field:focus-within & {
+        outline: none;
+        border-color: $accent;
+    }
+}
+
+
+
+.modal__textarea {
+    padding: 12px 16px;
+    height: 120px;
+    resize: none;
+
+    @extend %modal-input;
+
+    .modal__form-field:focus-within & {
+        outline: none;
+        border-color: $accent;
+    }
+    
+    &::placeholder {
+        @include text($size: 12px, $lheight: 1.16);
+        letter-spacing: 0.01em;
+
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+
+.modal__form-policy {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__policy-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    background-image: url('../images/ramcka.svg');
+}
+
+.modal__input:checked+.modal__policy-icon {
+    background-image: url('../images/check.svg');
+}
+
+.modal__link {
+    color: $accent;
+}

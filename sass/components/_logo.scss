@@ -1,0 +1,25 @@
+/* Logo логотип свйту */
+.logo {
+    color: $black;
+    font-family: Raleway, sans-serif;
+    @include text(700, 26px, 1.19);
+    letter-spacing: 0.03em;
+
+    transition: $color;
+
+    &--white {
+        color: $white;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accent;
+    }
+}
+
+
+
+.logo__prepend {
+    color: $accent;
+}
+

@@ -1,0 +1,18 @@
+/* Group  группа посилань*/
+.group {
+    margin: 0;
+
+    &--margin {
+        margin-left: 70px;
+        margin-right: 93px;
+    }
+}
+
+.group__heading {
+    margin: 0;
+    margin-bottom: 20px;
+
+    @include text(700, $transform: uppercase);
+    letter-spacing: 0.03em;
+    color: $white;
+}

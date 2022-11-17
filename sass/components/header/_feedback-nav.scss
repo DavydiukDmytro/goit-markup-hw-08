@@ -1,0 +1,47 @@
+/* Feedback-nav зворотній зв'язок*/
+.feedback-nav {
+    @extend %list;
+    display: flex;
+    margin-left: auto;
+}
+
+.feedback-nav__element:not(:last-child) {
+    margin-right: 50px;
+}
+
+.feedback-nav__link {
+    display: flex;
+    align-items: center;
+    padding: 32px 0;
+    color: $secondary-text;
+
+    @include text(500);
+    letter-spacing: 0.02em;
+
+
+    transition: $color;
+
+    &:hover, &:focus{
+        color: $accent;
+    }
+}
+
+.feedback-nav__svg {
+    fill: $secondary-text;
+    margin-right: 10px;
+
+    transition: $fill;
+
+    &--wide{
+        width: 16px;
+        height: 12px;
+    }
+    &--narrow{
+        width: 10px;
+        height: 16px;
+    }
+    .feedback-nav__link:focus &, 
+    .feedback-nav__link:hover &{
+        fill: $accent;
+    }
+}
