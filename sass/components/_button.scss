@@ -2,7 +2,7 @@
 .buttonn {
     display: inline-block;
     border-radius: 4px;
-    padding: 10px 32px;
+    padding: 10px 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 1px solid transparent;
     cursor: pointer;
@@ -15,6 +15,7 @@
     letter-spacing: 0.06em;
 
     &--secondary-bg{
+        min-width: 73px;
         padding: 6px 22px;
         color: $primary-text;
         background-color: $secondary-two-bg;
@@ -38,6 +39,10 @@
         padding: 10px 52px;
         margin: 0 auto;
         display: block;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        padding: 10px 32px;
     }
 }
 

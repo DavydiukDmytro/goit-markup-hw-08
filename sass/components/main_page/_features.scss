@@ -25,6 +25,7 @@ $icons: "antenna", "clock", "diagram", "astronaut";
 .features__heading {
     margin-top: 0;
     margin-bottom: 10px;
+    text-align: center;
     @include text(700, $transform: uppercase);
 }
 

@@ -2,10 +2,26 @@
 .portfolio-nav {
     @extend %list;
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    
+    margin-bottom: 25px;
+    @media screen and (max-width: calc($tablet - 1px)) {
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 48px;
+    }
 }
 
-.portfolio-nav__item:not(:last-child) {
-    margin-right: 8px;
+.portfolio-nav__item{
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    margin-bottom: 15px;
+    @media screen and (min-width: $tablet){
+        margin-bottom: 0;
+    }
 }

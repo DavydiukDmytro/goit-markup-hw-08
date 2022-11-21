@@ -1,27 +1,102 @@
 /* Card-set список з карточками*/
 .card-set {
     @extend %list;
-    display: flex;
+    // display: flex;
 
-    &--spase-between {
-        justify-content: space-between;
+    &--center {
+        display: flex;
+        justify-content: center;
+    }
+
+    &--flex{
+        display: flex;
     }
 
     &--minus-margin {
+        display: flex;
         flex-wrap: wrap;
         /* outline: 1px solid teal; */
-        margin-top: calc(-1 * $margin);
-        margin-left: calc(-1 * $margin);
+        // margin-top: calc(-1 * $margin);
+        // margin-left: calc(-1 * $margin);
+        margin: calc(-1 * ($margin / 2));
+    }
+    &--features,
+    &--team,
+    &--portfolio{
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            margin: calc(-1 * ($margin / 2));
+        }
+    }
+    &--client{
+        display: flex;
+        flex-wrap: wrap;
+        margin: calc(-1 * ($margin / 2));
     }
 }
 
 .card-set__item{
+    display: inline-block;
+
+    &--features, &--team{
+        @media screen and (max-width: calc($tablet - 1px)) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 2 * $margin) / 2);
+            margin: calc($margin / 2);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 4 * $margin) / 4);
+            margin: calc($margin / 2);
+        }
+    }
+
+
+    &--client{
+        width: calc((100% - 2 * $margin) / 2);
+        margin: calc($margin / 2);
+
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 3 * $margin) / 3);
+            margin: calc($margin / 2);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 6 * $margin) / 6);
+            margin: calc($margin / 2);
+        }
+    }
+    &--portfolio{
+        display: block;
+
+        @media screen and (max-width: calc($tablet - 1px)) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 2 * $margin) / 2);
+            margin: calc($margin / 2);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 3 * $margin) / 3);
+            margin: calc($margin / 2);
+        }
+    }
+    
     &--margin:not(:last-child) {
-        margin-right:$margin;
+        margin-bottom:$margin;
     }
 
     &--margin10:not(:last-child) {
         margin-right: 10px;
+    }
+
+    &--block{
+        display: block;
     }
 
     &--three {
@@ -36,13 +111,19 @@
         width: calc((100% - 90px) / 4);
     }
 
-    &--six {
-        width: calc((100% - 150px) / 6);
+    &--two {   
+        width: calc((100% - 2 * $margin) / 2);
         height: 92px;
+        margin: calc($margin / 2);
     }
 
-    &--relative {
+    &--activity {
         position: relative;
+
+        
+        &:not(:last-child){
+            margin-right: $margin;
+        }
     }
 
     &--box-shadow:hover,

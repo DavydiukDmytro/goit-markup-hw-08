@@ -2,7 +2,7 @@
 .logo {
     color: $black;
     font-family: Raleway, sans-serif;
-    @include text(700, 26px, 1.19);
+    @include text(700, 24px, 1.16);
     letter-spacing: 0.03em;
 
     transition: $color;
@@ -11,12 +11,20 @@
         color: $white;
     }
 
+    &--margin-modile{
+        display: block;
+        margin: 16px 0;
+    }
+
     &:hover,
     &:focus {
         color: $accent;
     }
-}
 
+    @media screen and (min-width: $desktop) {
+        @include text(700, 26px, 1.19);
+    }
+}
 
 
 .logo__prepend {

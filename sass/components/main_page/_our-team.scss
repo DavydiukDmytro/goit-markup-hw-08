@@ -1,6 +1,5 @@
 /* Our team секція наша команда*/
 .worker {
-    width: 270px;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -9,12 +8,12 @@
 
 .worker__img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .worker__meta {
-    padding: 30px 32px;
+    padding: 30px 32px 24px 32px;
 }
 
 .worker__name {
