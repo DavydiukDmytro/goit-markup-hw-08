@@ -11,8 +11,7 @@
     overflow: hidden;
 }
 .portfolio__img{
-    display: block;
-    width: 100%;
+    @extend %img;
 }
 
 .portfolio__overlay {

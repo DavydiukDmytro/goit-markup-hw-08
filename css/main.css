@@ -5,6 +5,12 @@
   padding: 0;
 }
 
+.portfolio__img, .worker__img, .activity__img, .img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .modal__input--visually-hidden, .section__heading--visually-hidden, .section--visual-hiden {
   position: absolute;
   white-space: nowrap;
@@ -321,12 +327,6 @@ body {
   fill: #ffffff;
 }
 
-.img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Header шапка сайту*/
 .header {
   border-bottom: 1px solid #f5f4fa;
@@ -337,7 +337,6 @@ body {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
 }
 .container--flex {
   display: -webkit-box;
@@ -860,12 +859,6 @@ body {
 }
 
 /* Activity секція чим ми займаємось*/
-.activity__img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .activity__thumb {
   position: absolute;
   bottom: 0;
@@ -903,12 +896,6 @@ body {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
-}
-
-.worker__img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .worker__meta {
@@ -1458,11 +1445,6 @@ body {
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
-}
-
-.portfolio__img {
-  display: block;
-  width: 100%;
 }
 
 .portfolio__overlay {
