@@ -559,7 +559,7 @@ body {
   fill: #2196f3;
 }
 
-.menu-button {
+.menu-toggle {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -569,16 +569,16 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.menu-button--close {
+.menu-toggle--close {
   position: absolute;
   top: 10px;
   right: 15px;
 }
-.menu-button:focus, .menu-button:hover {
+.menu-toggle:focus, .menu-toggle:hover {
   fill: #2196f3;
 }
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .menu-toggle {
     display: none;
   }
 }
