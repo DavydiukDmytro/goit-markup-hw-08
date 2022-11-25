@@ -11,16 +11,19 @@
         color: $white;
     }
 
-    &--margin-modile{
-        display: block;
-        margin: 16px 0;
-    }
-
+    @media screen and (max-width: calc($tablet - 1px)){
+        &--margin-modile{
+            margin: 16px 0;
+        }
+    }   
     &:hover,
     &:focus {
         color: $accent;
     }
 
+    @media screen and (min-width: $desktop) {
+        margin: 0;
+    }
     @media screen and (min-width: $desktop) {
         @include text(700, 26px, 1.19);
     }

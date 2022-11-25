@@ -1,6 +1,9 @@
 /* Portfolio картка портфоліо */
 .portfolio {
     text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
 }
 
 .portfolio__thumb {
@@ -50,6 +53,7 @@
 }
 
 .portfolio__name {
+    flex-grow: 1;
     padding: 20px 24px;
     border: 1px solid #eeeeee;
 }

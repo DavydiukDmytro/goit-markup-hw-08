@@ -17,13 +17,12 @@
   </head>
   <body>
     <header class="header">
-      <!-- container--flex -->
-      <div class="container">
+      <div class="container container--flex">
         <nav class="nav">
-          <a href="./portfolio.html" lang="en" class="logo logo--margin-modile"
+          <a href="./index.html" lang="en" class="logo logo--margin-modile"
             ><span class="logo__prepend">Web</span>Studio</a
           >
-          <!-- <ul class="site-nav nav__site-nav">
+          <ul class="site-nav nav__site-nav">
             <li class="site-nav__element">
               <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
             </li>
@@ -31,9 +30,9 @@
               <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
             </li>
             <li class="site-nav__element"><a href="#" class="site-nav__link">Контакти</a></li>
-          </ul> -->
+          </ul>
         </nav>
-        <!-- <ul class="feedback-nav">
+        <ul class="feedback-nav">
           <li class="feedback-nav__element">
             <a href="mailto:info@devstudio.com" lang="en" class="feedback-nav__link">
               <svg class="feedback-nav__svg feedback-nav__svg--wide">
@@ -50,7 +49,17 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul> -->
+        </ul>
+        <button
+          class="menu-button js-open-menu"
+          type="button"
+          aria-controls="menu-container "
+          aria-expanded="false"
+        >
+          <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
+            <use class="icon-menu" href="./images/icon.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -518,6 +527,53 @@
         <button class="buttonn buttonn--center" type="submit">Відправити</button>
       </form>
     </div>
+    <!-- Мобільне меню сайту -->
+    <div class="menu-container js-menu-container" id="menu-container">
+      <div class="container container--menu">
+        <button class="menu-button menu-button--close js-close-menu" type="button">
+          <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
+            <use class="icon-cross" href="./images/icon.svg#icon-menu_close"></use>
+          </svg>
+        </button>
+        <ul class="mobile-nav">
+          <li class="mobile-nav__element">
+            <a href="./index.html" class="mobile-nav__link mobile-nav__link--current">Студія</a>
+          </li>
+          <li class="mobile-nav__element">
+            <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
+          </li>
+          <li class="mobile-nav__element"><a href="#" class="mobile-nav__link">Контакти</a></li>
+        </ul>
+        <div class="contact-nav">
+          <ul class="feedback-nav-mobile">
+            <li class="feedback-nav-mobile__element">
+              <a href="tel:+380961111111" class="feedback-nav-mobile__link"> +38 096 111 11 11</a>
+            </li>
+            <li class="feedback-nav-mobile__element">
+              <a
+                href="mailto:info@devstudio.com"
+                lang="en"
+                class="feedback-nav-mobile__link feedback-nav-mobile__link--secondary"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="social-nav">
+            <li class="social-nav__element">
+              <a class="social-nav__link social-nav__link--margin-left" href="">Instagram</a>
+            </li>
+            <li class="social-nav__element"><a class="social-nav__link" href="">Twitter</a></li>
+            <li class="social-nav__element"><a class="social-nav__link" href="">Facebook</a></li>
+            <li class="social-nav__element">
+              <a class="social-nav__link social-nav__link--margin-right" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <script src="./js/modal.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

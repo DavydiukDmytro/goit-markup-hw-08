@@ -15,7 +15,13 @@
 @import './components/header/nav';
 @import './components/logo';
 @import './components/header/site-nav';
-@import './components/header/feedback-nav'; 
+@import './components/header/feedback-nav';
+@import './components/header/mobile-menu/menu_button';
+@import './components/header/mobile-menu/menu_container';
+@import './components/header/mobile-menu/mobile-menu'; 
+@import './components/header/mobile-menu/feedback-nav-mobile';
+@import './components/header/feedback-nav1';
+@import './components/header/mobile-menu/social-nav';
 // Main
 // Hero секція герой
 @import './components/main_page/hero';

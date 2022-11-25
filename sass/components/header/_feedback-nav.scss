@@ -1,18 +1,26 @@
 /* Feedback-nav зворотній зв'язок*/
 .feedback-nav {
     @extend %list;
-    display: flex;
-    margin-left: auto;
+    display: none;
+    
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .feedback-nav__element:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $desktop) {
+        margin-right: 30px;
+    }
 }
 
 .feedback-nav__link {
     display: flex;
     align-items: center;
-    padding: 32px 0;
+    padding: 5px 0;
     color: $secondary-text;
 
     @include text(500);

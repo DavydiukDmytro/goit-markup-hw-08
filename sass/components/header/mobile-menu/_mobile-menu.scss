@@ -1,0 +1,22 @@
+.mobile-nav{
+    @extend %list;
+}
+.mobile-nav__element{
+    &:not(:last-child){
+        margin-bottom: 32px;
+    }
+}
+.mobile-nav__link{
+    text-decoration: none;
+    @include text(500, 40px, 1.17);
+    letter-spacing: 0.02em;
+    color: $primary-text;
+
+    transition: $color;
+
+    &--current, 
+    &:hover,
+    &:focus{
+        color: $accent;
+    }
+}

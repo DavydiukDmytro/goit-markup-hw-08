@@ -1,0 +1,29 @@
+.feedback-nav-mobile{
+    @extend %list;
+}
+.feedback-nav-mobile__element{
+    &:not(:last-child){
+        margin-bottom: 32px;
+    }
+}
+.feedback-nav-mobile__link{
+    text-decoration: none;
+    @include text(500, 28px, 1.17);
+    letter-spacing: 0.02em;
+    color: $accent;
+
+    transition: $color;
+
+    &--current, 
+    &:hover,
+    &:focus{
+        color: $accent;
+    }
+    @media screen and (min-width: calc(380px)){
+        @include text(500, 34px, 1.17);
+    }
+    &--secondary{
+        @include text(500, 24px, 1.17);
+        color: $secondary-text;
+    }
+}

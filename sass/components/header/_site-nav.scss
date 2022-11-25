@@ -1,11 +1,18 @@
 /* Site-nav навігація по сторінкам сайту*/
 .site-nav {
-    @extend %list;
-    display: flex;
+    @extend %list; 
+    margin-left: 87px;
+    display: none;
+    @media screen and (min-width: $tablet){
+        display: flex;
+    }
+    @media screen and (min-width: $desktop){
+        margin-left: 92px;
+    }
 }
 
 .nav__site-nav {
-    margin-left: 93px;
+    // margin-left: 93px;
 }
 
 .site-nav__element:not(:last-child) {
