@@ -27,6 +27,9 @@ $icons: "antenna", "clock", "diagram", "astronaut";
     margin-bottom: 10px;
     text-align: center;
     @include text(700, $transform: uppercase);
+    @media screen and(min-width: $tablet) {
+        text-align: left;
+    }
 }
 
 .features__text {

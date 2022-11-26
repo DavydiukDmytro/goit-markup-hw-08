@@ -43,6 +43,9 @@
     
     @media screen and (min-width: $desktop) {
         padding: 10px 32px;
+        &--secondary-bg{
+            padding: 6px 22px;
+        }
     }
 }
 

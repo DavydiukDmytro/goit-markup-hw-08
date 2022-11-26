@@ -23,7 +23,7 @@
     padding: 5px 0;
     color: $secondary-text;
 
-    @include text(500);
+    @include text(500, 12px, 1.16);
     letter-spacing: 0.02em;
 
 
