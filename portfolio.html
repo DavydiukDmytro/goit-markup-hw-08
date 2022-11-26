@@ -13,6 +13,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -24,12 +30,10 @@
           >
           <ul class="site-nav nav__site-nav">
             <li class="site-nav__element">
-              <a href="./index.html" class="site-nav__link">Студія</a>
+              <a href="./index.html" class="site-nav__link site-nav__link--current">Студія</a>
             </li>
             <li class="site-nav__element">
-              <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
-                >Портфоліо</a
-              >
+              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
             </li>
             <li class="site-nav__element"><a href="#" class="site-nav__link">Контакти</a></li>
           </ul>
@@ -53,7 +57,7 @@
           </li>
         </ul>
         <button
-          class="menu-button js-open-menu"
+          class="menu-toggle js-open-menu"
           type="button"
           aria-controls="menu-container "
           aria-expanded="false"
@@ -95,12 +99,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/technoquack.jpg"
-                    alt="Відкритий ноутбук з веб-сайтом"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio1-d.jpg 1x, ./images/portfolio1-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio1-t.jpg 1x, ./images/portfolio1-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio1-m.jpg 1x, ./images/portfolio1-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio1-m.jpg"
+                      alt="Відкритий ноутбук з веб-сайтом"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -118,12 +138,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/poster.jpg"
-                    alt="Два басткеболіста"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio2-d.jpg 1x, ./images/portfolio2-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio2-t.jpg 1x, ./images/portfolio2-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio2-m.jpg 1x, ./images/portfolio2-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio2-m.jpg"
+                      alt="Два басткеболіста"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -141,12 +177,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/restaurant.jpg"
-                    alt="Логотип ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio3-d.jpg 1x, ./images/portfolio3-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio3-t.jpg 1x, ./images/portfolio3-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio3-m.jpg 1x, ./images/portfolio3-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio3-m.jpg"
+                      alt="Логотип ресторану"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -164,12 +216,24 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/prime.jpg"
-                    alt="Навушники"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio4-d.jpg 1x, ./images/portfolio4-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio4-t.jpg 1x, ./images/portfolio4-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio4-m.jpg 1x, ./images/portfolio4-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img class="portfolio__img" src="./images/portfolio4-m.jpg" alt="Навушники" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -187,7 +251,24 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img class="portfolio__img" src="./images/boxes.jpg" alt="Коробки" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio5-d.jpg 1x, ./images/portfolio5-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio5-t.jpg 1x, ./images/portfolio5-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio5-m.jpg 1x, ./images/portfolio5-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img class="portfolio__img" src="./images/portfolio5-m.jpg" alt="Коробки" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -205,12 +286,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/inspiration.jpg"
-                    alt="Монітор з відкритим веб-сайтом"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio6-d.jpg 1x, ./images/portfolio6-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio6-t.jpg 1x, ./images/portfolio6-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio6-m.jpg 1x, ./images/portfolio6-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio6-m.jpg"
+                      alt="Монітор з відкритим веб-сайтом"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -228,12 +325,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/edition.jpg"
-                    alt="Видання книги"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio7-d.jpg 1x, ./images/portfolio7-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio7-t.jpg 1x, ./images/portfolio7-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio7-m.jpg 1x, ./images/portfolio7-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio7-m.jpg"
+                      alt="Видання книги"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -251,7 +364,24 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img class="portfolio__img" src="./images/lab.jpg" alt="Проєкт LAB" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio8-d.jpg 1x, ./images/portfolio8-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio8-t.jpg 1x, ./images/portfolio8-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio8-m.jpg 1x, ./images/portfolio8-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img class="portfolio__img" src="./images/portfolio8-m.jpg" alt="Проєкт LAB" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -269,12 +399,28 @@
             <li class="card-set__item card-set__item--box-shadow card-set__item--portfolio">
               <a href="#" class="portfolio">
                 <div class="portfolio__thumb">
-                  <img
-                    class="portfolio__img"
-                    src="./images/business.jpg"
-                    alt="Людина працює за ноутбуком в додаткі про бізнес"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfolio9-d.jpg 1x, ./images/portfolio9-d-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio9-t.jpg 1x, ./images/portfolio9-t-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="./images/portfolio9-m.jpg 1x, ./images/portfolio9-m-2x.jpg 2x"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      class="portfolio__img"
+                      src="./images/portfolio9-m.jpg"
+                      alt="Людина працює за ноутбуком в додаткі про бізнес"
+                    />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -378,21 +524,19 @@
       </div>
     </footer>
     <!-- Мобільне меню сайту -->
-    <div class="menu-container js-menu-container" id="menu-container">
+    <div class="menu-container js-menu-container" id="mobile-menu">
       <div class="container container--menu">
-        <button class="menu-button menu-button--close js-close-menu" type="button">
+        <button class="menu-toggle menu-toggle--close js-close-menu" type="button">
           <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
             <use class="icon-cross" href="./images/icon.svg#icon-menu_close"></use>
           </svg>
         </button>
         <ul class="mobile-nav">
           <li class="mobile-nav__element">
-            <a href="./index.html" class="mobile-nav__link">Студія</a>
+            <a href="./index.html" class="mobile-nav__link mobile-nav__link--current">Студія</a>
           </li>
           <li class="mobile-nav__element">
-            <a href="./portfolio.html" class="mobile-nav__link mobile-nav__link--current"
-              >Портфоліо</a
-            >
+            <a href="./portfolio.html" class="mobile-nav__link">Портфоліо</a>
           </li>
           <li class="mobile-nav__element"><a href="#" class="mobile-nav__link">Контакти</a></li>
         </ul>
@@ -424,6 +568,12 @@
         </div>
       </div>
     </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
